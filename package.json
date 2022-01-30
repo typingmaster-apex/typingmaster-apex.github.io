@@ -1,0 +1,27 @@
+{
+  "name": "typingmaster-apex-showcase",
+  "version": "1.0.0",
+  "description": "typing master apex app showcase webite repo",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/typingmaster-apex/typingmaster-apex.github.io.git"
+  },
+  "keywords": [
+    "typingmaster"
+  ],
+  "author": "Vivek Verma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/typingmaster-apex/typingmaster-apex.github.io/issues"
+  },
+  "homepage": "https://github.com/typingmaster-apex/typingmaster-apex.github.io#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "http-server": "^14.1.0"
+  }
+}

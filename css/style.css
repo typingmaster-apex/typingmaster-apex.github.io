@@ -56,7 +56,6 @@ strong {
 .overlay {
   width: calc(100% - 10vw);
   max-width: 1140px;
-  max-height: 640px;
   padding: 8rem 4rem 0 4rem;
   display: flex;
   align-items: center;
@@ -81,7 +80,7 @@ strong {
 .overlay__description {
   font-size: 1rem;
   line-height: 1.75rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .overlay__btns {
@@ -91,7 +90,7 @@ strong {
 }
 
 .overlay__btn {
-  width: 50%;
+  width: 200px;
   height: auto;
   display: flex;
   justify-content: flex-start;
@@ -144,7 +143,7 @@ strong {
   border-bottom-width: 0;
   position: relative;
   background: rgba(1, 31, 43, 0.01)!important;
-  box-shadow: 0 19px 38px rgb(0 0 0 / 31%), 0 15px 12px rgb(0 0 0 / 22%);
+  box-shadow: 0 19px 38px rgb(0 0 0 / 31%), 0 15px 12px rgb(0 0 0 / 24%);
 }
 
 .iphone-x-notch {
@@ -203,26 +202,17 @@ strong {
   }
 }
 
-@media only screen and (max-width: 1140px) {
-/*
-  .overlay {
-    padding: 8rem 4rem;
-  }
-*/
-}
+
+/* Tablets Styles */
 
 @media only screen and (max-width: 840px) {
-  body {
-    padding: 1.5rem;
-  }
 
   .overlay {
-    padding: 4rem;
-    height: auto;
+    padding: 5rem 2rem 0 2rem;
   }
 
   .overlay__title {
-    font-size: 1.25rem;
+    font-size: 1.8rem;
     line-height: 2rem;
     margin-bottom: 1.5rem;
   }
@@ -234,22 +224,22 @@ strong {
   }
 }
 
+
+/* Phone Styles */
+
 @media only screen and (max-width: 600px) {
   .overlay {
     padding: 1.5rem;
+    flex-direction: column;
   }
-
-  .overlay__btns {
-    flex-wrap: wrap;
+  .overlay__inner {
+    padding: 25px 0 0 0;
   }
-
-  .overlay__btn {
-    width: 100%;
-    margin-right: 0;
-    font-size: 0.75rem;
+  #iphone-x {
+    height: 355px;
+    margin-right: auto;
   }
-
-  .overlay__btn:first-child {
-    margin-bottom: 1rem;
+  .overlay__description {
+    margin-bottom: 1.4rem;
   }
 }

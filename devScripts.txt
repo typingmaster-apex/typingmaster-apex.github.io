@@ -1,0 +1,14 @@
+running html projects in browser  --
+
+---- HTTP Server -----------
+npm install http-server --save-dev
+
+effects package.json ->
+  "scripts": {
+    "start": "http-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
+Usage --
+
+npm start
