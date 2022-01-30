@@ -1,0 +1,63 @@
+:root {
+  --width: 176px;
+}
+
+.slideshow {
+  position: relative;
+  width: var(--width);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.slideshow-items {
+  position: relative;
+  width: var(--width);
+  height: 320px;
+}
+
+.item {
+  position: absolute;
+  width: 100%;
+  height: auto;
+}
+
+.item-image {
+  position: relative;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  display: block;
+  /* transition: property name | duration | timing-function | delay  */
+  transition: opacity .3s ease-out .45s;
+}
+
+.item.active .item-image {
+  opacity: 1;
+}
+
+/* Controls ----------------------------------------------------------------------*/
+.controls {
+  position: relative;
+  z-index: 1000;
+  align-self: center;
+}
+
+.controls ul {
+  list-style: none;
+}
+
+.controls ul li {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 3px;
+  background:#bdbdd5;;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+.controls ul li.active {
+  background:#6a6a77;;
+}

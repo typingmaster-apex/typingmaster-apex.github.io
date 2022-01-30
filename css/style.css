@@ -1,0 +1,255 @@
+:root {
+  --hue: 239;
+  --hue-complimentary1: 269;
+  --hue-complimentary2: 299;
+  
+  --dark-color: hsl(var(--hue), 100%, 9%);
+  --light-color: hsl(var(--hue), 95%, 98%);
+  --base: hsl(var(--hue), 95%, 50%);
+  --complimentary1: hsl(var(--hue-complimentary1), 95%, 50%);
+  --complimentary2: hsl(var(--hue-complimentary2), 95%, 50%);
+
+  --font-family: "Poppins", system-ui;
+
+  --bg-gradient: linear-gradient(
+    to bottom,
+    hsl(var(--hue), 95%, 99%),
+    hsl(var(--hue), 95%, 84%)
+  );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  max-width: 1920px;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-family);
+  color: var(--dark-color);
+  background: var(--bg-gradient);
+}
+
+.orb-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+strong {
+  font-weight: 600;
+}
+
+.overlay {
+  width: calc(100% - 10vw);
+  max-width: 1140px;
+  max-height: 640px;
+  padding: 8rem 4rem 0 4rem;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.375);
+  box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+  border-radius: 2rem;
+}
+
+.overlay__inner {
+  max-width: 36rem;
+  padding: 0 5%;
+}
+
+.overlay__title {
+  font-size: 3rem;
+  line-height: 2.75rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  margin-bottom: 2rem;
+}
+
+.overlay__description {
+  font-size: 1rem;
+  line-height: 1.75rem;
+  margin-bottom: 3rem;
+}
+
+.overlay__btns {
+  width: 100%;
+  max-width: 30rem;
+  display: flex;
+}
+
+.overlay__btn {
+  width: 50%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: var(--dark-color);
+  border: none;
+  border-radius: 0.5rem;
+  transition: transform 150ms ease;
+}
+.overlay__btn:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+.overlay__btn_container {
+  display: flex;
+  flex-direction: row;
+  color: #fff;
+  padding: 10px;
+  text-decoration: none;
+  text-align: left;
+  align-items: center;
+}
+.overlay__btn_subcontainer {
+  display: flex;
+  flex-direction: column;
+}
+.overlay__btn_title {
+  font-size: 14px;
+}
+.overlay__btn_subtitle {
+  font-size: 20px;
+}
+.overlay__btn_playicon {
+  width: 40px;
+  margin-right: 15px;
+}
+
+/* iPhone Mocukup styles */
+
+#iphone-x {
+  height: 365px;
+  min-width: 200px;
+  max-width: 200px;
+  overflow: hidden;
+  display: inline-block;
+  border: 12px solid #011F2B;
+  border-radius: 36px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-width: 0;
+  position: relative;
+  background: rgba(1, 31, 43, 0.01)!important;
+  box-shadow: 0 19px 38px rgb(0 0 0 / 31%), 0 15px 12px rgb(0 0 0 / 22%);
+}
+
+.iphone-x-notch {
+  width: 56%;
+  height: 14px;
+  position: absolute;
+  left: calc(50% - 28%);
+  top: 0;
+  display: flex;
+  z-index: 9;
+  justify-content: center;
+  background: #011F2B;
+  border-radius: 0 0 15px 15px;
+}
+.iphone-x-notch-grill {
+  width: 30px;
+  height: 3px;
+  margin-top: 2px;
+  background-color: black;  
+}
+
+.volume {
+  position: absolute;
+}
+.firstButtonVolume {
+  width: 4px;
+  height: 20px;
+  margin: 40px -14px 20px;
+  list-style: none;
+  border-radius: 20%;
+  background: #011F2B;
+}
+.otherButtonsLeft {
+  width: 4px;
+  height: 30px;
+  list-style: none;
+  margin: 6px -14px;
+  background: #011F2B;
+}
+.rightButton {
+  width: 4px;
+  height: 59px; 
+  list-style: none;
+  position: absolute;
+  right: -14px;
+  top: 58px;
+  border-radius: 20%;
+  background: #011F2B;
+}
+
+
+/* Not too many browser support this yet but it's good to add! */
+@media (prefers-contrast: high) {
+  .orb-canvas {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1140px) {
+/*
+  .overlay {
+    padding: 8rem 4rem;
+  }
+*/
+}
+
+@media only screen and (max-width: 840px) {
+  body {
+    padding: 1.5rem;
+  }
+
+  .overlay {
+    padding: 4rem;
+    height: auto;
+  }
+
+  .overlay__title {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .overlay__description {
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .overlay {
+    padding: 1.5rem;
+  }
+
+  .overlay__btns {
+    flex-wrap: wrap;
+  }
+
+  .overlay__btn {
+    width: 100%;
+    margin-right: 0;
+    font-size: 0.75rem;
+  }
+
+  .overlay__btn:first-child {
+    margin-bottom: 1rem;
+  }
+}

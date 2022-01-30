@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Typing Master Apex</title>
+  <meta name="description" content="Learn typing fast.Typing Master Apex is developed on focusing to improve your typing skills faster.">
+  <meta name="author" content="Binary inc.">
+  <meta name="generator" content="Typing Master">
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/slideshow.css">
+</head>
+<body>
+<!-- Canvas -->
+<canvas class="orb-canvas"></canvas>
+<!-- Overlay -->
+<div class="overlay">
+  <!-- iPhone Preview -->
+  <div id="iphone-x">
+    <!-- notch -->
+    <div class="iphone-x-notch">
+      <div class="iphone-x-notch-grill"></div>
+    </div>
+    <!-- buttons -->
+    <ul class="volume">
+      <li class="firstButtonVolume"></li>
+      <li class="otherButtonsLeft"></li>
+      <li class="otherButtonsLeft"></li>
+    </ul>
+    <ul>
+      <li class="rightButton"></li>
+    </ul>
+    <!-- slideshow -->
+    <div class="slideshow">
+      <!-- Slideshow Items -->
+      <div class="slideshow-items">
+        <div class="item"><img class="item-image" src="./assets/img1.jpg" /></div>
+        <div class="item"><img class="item-image" src="./assets/img2.jpg" /></div>
+        <div class="item"><img class="item-image" src="./assets/img4.jpg" /></div>
+      </div>
+      <div class="controls">
+        <ul>
+          <li class="control" data-index="0"></li>
+          <li class="control" data-index="1"></li>
+          <li class="control" data-index="2"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <div class="overlay__inner">
+    <!-- Title -->
+    <h1 class="overlay__title">Typing Master Apex</h1>
+    <!-- Description -->
+    <p class="overlay__description">
+      Developed on focusing to improve your typing skills faster.
+      The app has a rich set of free typing lessons based on different rows of keyboard.
+      Letters are highlighted to help you focus on typing within the lesson.
+      <strong>External Keyboard Mode available too.</strong>
+    </p>
+    <!-- Buttons -->
+    <div class="overlay__btns">
+      <button class="overlay__btn overlay__btn--colors">
+        <a href="https://play.google.com/store/apps/details?id=com.typingmaster_apex" target="_blank" class="overlay__btn_container">
+          <img src="assets/play_icon.svg" class="overlay__btn_playicon"/>
+          <div class="overlay__btn_subcontainer">
+            <span class="overlay__btn_title">Get it on</span>
+            <span class="overlay__btn_subtitle">Play Store</span>
+          </div>
+        </a>
+      </button>
+    </div>
+  </div>
+</div>
+  <script async type="module" src="./js/slideshow.js"></script>
+  <script async type="module" src="./js/script.js"></script>
+</body>
+</html>
