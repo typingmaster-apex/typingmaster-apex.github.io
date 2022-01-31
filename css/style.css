@@ -210,13 +210,11 @@ strong {
   .overlay {
     padding: 5rem 2rem 0 2rem;
   }
-
   .overlay__title {
     font-size: 1.8rem;
     line-height: 2rem;
     margin-bottom: 1.5rem;
   }
-
   .overlay__description {
     font-size: 0.875rem;
     line-height: 1.5rem;
