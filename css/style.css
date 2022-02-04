@@ -227,6 +227,7 @@ strong {
 
 @media only screen and (max-width: 600px) {
   .overlay {
+    height: calc(100% - 10vw);
     padding: 1.5rem;
     flex-direction: column;
   }
