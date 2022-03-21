@@ -3,7 +3,7 @@
   --hue-complimentary1: 269;
   --hue-complimentary2: 299;
   
-  --dark-color: hsl(var(--hue), 100%, 9%);
+  --dark-color: hsl(var(--hue), 10%, 0%);
   --light-color: hsl(var(--hue), 95%, 98%);
   --base: hsl(var(--hue), 95%, 50%);
   --complimentary1: hsl(var(--hue-complimentary1), 95%, 50%);
@@ -56,20 +56,22 @@ strong {
 .overlay {
   width: calc(100% - 10vw);
   max-width: 1140px;
-  padding: 8rem 4rem 0 4rem;
+  padding: 4rem;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  background: rgba(255, 255, 255, 0.375);
+  background: rgba(255, 255, 255, 0.675);
   box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
   border-radius: 2rem;
 }
 
 .overlay__inner {
   max-width: 36rem;
-  padding: 0 5%;
 }
 
 .overlay__title {
+  display: flex;
+  align-items: center;
   font-size: 3rem;
   line-height: 2.75rem;
   font-weight: 700;
@@ -77,8 +79,13 @@ strong {
   margin-bottom: 2rem;
 }
 
+.overlay__title img {
+  width: 80px;
+  opacity: 1;
+}
+
 .overlay__description {
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.75rem;
   margin-bottom: 2rem;
 }
@@ -97,11 +104,11 @@ strong {
   align-items: flex-start;
   background: var(--dark-color);
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 0.8rem;
   transition: transform 150ms ease;
 }
 .overlay__btn:hover {
-  transform: scale(1.02);
+  opacity: 0.6;
   cursor: pointer;
 }
 .overlay__btn_container {
@@ -131,16 +138,14 @@ strong {
 /* iPhone Mocukup styles */
 
 #iphone-x {
-  height: 365px;
+  height: 395px;
   min-width: 200px;
   max-width: 200px;
+  margin-left: 5%;
   overflow: hidden;
   display: inline-block;
-  border: 12px solid #011F2B;
+  border: 12px solid var(--dark-color);
   border-radius: 36px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  border-bottom-width: 0;
   position: relative;
   background: rgba(1, 31, 43, 0.01)!important;
   box-shadow: 0 19px 38px rgb(0 0 0 / 31%), 0 15px 12px rgb(0 0 0 / 24%);
@@ -155,14 +160,14 @@ strong {
   display: flex;
   z-index: 9;
   justify-content: center;
-  background: #011F2B;
+  background: var(--dark-color);
   border-radius: 0 0 15px 15px;
 }
 .iphone-x-notch-grill {
   width: 30px;
   height: 3px;
   margin-top: 2px;
-  background-color: black;  
+  background-color: #222;  
 }
 
 .volume {
